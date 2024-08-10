@@ -9,6 +9,7 @@ $surat = $db->tampil_data();
 	<title></title>
 </head>
 <body>
+    <a href="../index.html">halaman utama</a> <br>
     <a href="tambah.php">Tambah Data Surat</a>
         <table border="1">
                 <tr>
@@ -30,7 +31,7 @@ $surat = $db->tampil_data();
                     ?>
                     <tr>
                         <td><?php echo $no++; ?></td>
-                        <td><?php echo $row['id_mhs']; ?></td>
+                        <td><?php echo $row['nim']; ?></td>
                         <td><?php echo $row['id_pelapor']; ?></td>
                         <td><?php echo $row['id_bag_perpustakaan']; ?></td>
                         <td><?php echo $row['id_bag_keuangan']; ?></td>

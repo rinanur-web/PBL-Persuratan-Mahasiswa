@@ -17,7 +17,8 @@ class database_mahasiswa{
  
 	function tampil_data()
 	{
-		$data = mysqli_query($this->koneksi,"select * from tbl_mahasiswa");
+		$query = "SELECT tbl_mahasiswa.id_mhs, tbl_user.username, tbl_mahasiswa.nim, tbl_mahasiswa.kelas_mhs, tbl_mahasiswa.prodi_mhs, tbl_mahasiswa.ttd_mhs FROM tbl_mahasiswa join tbl_user on tbl_mahasiswa.id_user = tbl_user.id_user";
+		$data = mysqli_query($this->koneksi, $query);
 		while($row = mysqli_fetch_array($data)){
 			$hasil[] = $row;
 		}

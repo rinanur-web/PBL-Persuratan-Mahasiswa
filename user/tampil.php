@@ -9,6 +9,7 @@ $user = $db->tampil_data();
 	<title></title>
 </head>
 <body>
+    <a href="../index.html">halaman utama</a> <br>
     <a href="tambah.php">Tambah Data Mahasiswa</a>
         <table border="1">
                 <tr>
@@ -42,5 +43,3 @@ $user = $db->tampil_data();
         </table>
 </body>
 </html>
-
-<!-- hfchjfujfjyhur -->

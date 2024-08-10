@@ -9,6 +9,7 @@ $mahasiswa = $db->tampil_data();
 	<title></title>
 </head>
 <body>
+    <a href="../index.html">halaman utama</a> <br>
     <a href="tambah.php">Tambah Data Mahasiswa</a>
         <table border="1">
                 <tr>
@@ -28,7 +29,7 @@ $mahasiswa = $db->tampil_data();
                     <tr>
                         <td><?php echo $no++; ?></td>
                         <td><?php echo $row['id_mhs']; ?></td>
-                        <td><?php echo $row['id_user']; ?></td>
+                        <td><?php echo $row['username']; ?></td>
                         <td><?php echo $row['nim']; ?></td>
                         <td><?php echo $row['kelas_mhs']; ?></td>
                         <td><?php echo $row['prodi_mhs']; ?></td>

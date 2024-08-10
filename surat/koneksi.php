@@ -17,7 +17,8 @@ class database_surat{
  
 	function tampil_data()
 	{
-		$data = mysqli_query($this->koneksi,"select * from tbl_surat");
+		$query = "SELECT tbl_surat.id_surat, tbl_mahasiswa.nim, tbl_surat.id_pelapor, tbl_surat.id_bag_perpustakaan, tbl_surat.id_bag_keuangan, tbl_surat.id_dosen, tbl_surat.id_kajur, tbl_surat.nama_surat, tbl_surat.tgl_surat, tbl_surat.no_surat FROM tbl_surat join tbl_mahasiswa on tbl_surat.id_mhs = tbl_mahasiswa.id_mhs";
+		$data = mysqli_query($this->koneksi, $query);
 		while($row = mysqli_fetch_array($data)){
 			$hasil[] = $row;
 		}
